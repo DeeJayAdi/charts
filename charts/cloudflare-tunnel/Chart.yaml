@@ -1,0 +1,9 @@
+apiVersion: v2
+name: cloudflare-tunnel
+description: Cloudflare Tunnel helm chart
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0.0"

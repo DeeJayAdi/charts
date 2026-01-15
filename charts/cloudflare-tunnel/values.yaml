@@ -1,0 +1,3 @@
+config:
+  token: "" # Cloudflare token
+  replicaCount: 1 # The number of replicas

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "wikijs.ingName" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "wikijs.ingName" . }}
+spec:
+  {{- if .Values.wikijs.ingress.tls.secretName }}
+  tls:
+    - secretName: {{ .Values.wikijs.ingress.tls.secretName }}
+      hosts:
+        - {{ .Values.wikijs.ingress.host }}
+  {{- end }}
+  rules:
+  - host: {{ .Values.wikijs.ingress.host }}
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: {{ include "wikijs.svcName" . }}
+            port: 
+              number: 3000

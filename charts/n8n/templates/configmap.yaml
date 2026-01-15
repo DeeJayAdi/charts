@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "n8n.configmap" . }}
+data:
+  # Timezone
+  GENERIC_TIMEZONE: {{ .Values.timezone | default "UTC" | quote }}
+  TZ: {{ .Values.timezone | default "UTC" | quote }}
+  # Config
+  NODE_ENV: {{ .Values.nodeEnv | default "production" | quote }}
+  N8N_HOST: {{ .Values.n8n.domain | quote }}
+  N8N_EDITOR_BASE_URL: {{ printf "%s://%s" (.Values.n8n.protocol | lower) (.Values.n8n.domain | lower) | quote }}
+  WEBHOOK_URL: {{ printf "%s://%s" (.Values.n8n.protocol | lower) (.Values.n8n.domain | lower) | quote }}
+  N8N_RUNNERS_ENABLED: {{ .Values.n8n.runners_enabled | quote }}
+  N8N_PORT: {{ .Values.n8n.port | quote }}
+  N8N_PROTOCOL: {{ .Values.n8n.protocol | lower | quote }}
+  N8N_TRUST_PROXY_HEADER: {{ .Values.proxy.trust_header | default false | quote }}
+  N8N_PROXY_HOPS: {{ .Values.proxy.hops | default 1 | quote }}
+  # Database
+  DB_TYPE: {{ .Values.db.type | default "sqlite" | quote }}
+  {{- if eq (.Values.db.type | default "sqlite") "postgresdb" }}
+  DB_POSTGRESDB_DATABASE: {{ .Values.db.name | quote }}
+  DB_POSTGRESDB_HOST: {{ .Values.db.host | quote }}
+  DB_POSTGRESDB_PORT: {{ .Values.db.port | quote }}
+  DB_POSTGRESDB_SCHEMA: {{ .Values.db.schema | default "public" | quote }}
+  {{- end }}
+  # Security
+  N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: {{ .Values.security.enforce_settings_file_permissions | quote }}
+  N8N_BLOCK_ENV_ACCESS_IN_NODE: {{ .Values.security.block_env_access_in_node | quote }}
+  N8N_GIT_NODE_DISABLE_BARE_REPOS: {{ .Values.security.git_node_disable_bare_repos | quote }}
+  # Email
+  {{- if .Values.email.enabled }}
+  N8N_EMAIL_MODE: {{ .Values.email.mode | default "smtp" | quote }}
+  N8N_SMTP_HOST: {{ .Values.email.host | quote }}
+  N8N_SMTP_PORT: {{ .Values.email.port | quote }}
+  N8N_SMTP_SENDER: {{ .Values.email.sender | quote }}
+  N8N_SMTP_INVITE_LINKS_EMAIL_ONLY: {{ .Values.email.invite_links_email_only | quote }}
+  {{- end }}

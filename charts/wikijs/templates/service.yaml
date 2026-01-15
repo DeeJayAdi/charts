@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "wikijs.svcName" . }}
+spec:
+  selector:
+    app: {{ include "wikijs.deployName" . }}
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - port: 3000
+    targetPort: 3000

@@ -1,0 +1,55 @@
+replicaCount: 1
+
+timezone: "UTC"
+
+n8n:
+  version: "2.1.0"
+  port: 80
+  protocol: http
+  domain: n8n.example.com
+  encryption_key: "n8n-s3lf-h0st3d"
+
+  runners_enabled: true
+
+probes:
+  readiness:
+    initialDelaySeconds: 30
+    periodSeconds: 10
+  liveness:
+    initialDelaySeconds: 30
+    periodSeconds: 10
+
+ingress:
+  enabled: true
+  tls:
+    enabled: false
+    secretName: n8n-tls
+
+db:
+  type: sqlite # "sqlite" or "postgresdb"
+  # if type=postgresdb
+  host: ""
+  port: 5432
+  user: ""
+  password: ""
+  name: "n8n"
+  schema:
+
+proxy:
+  trust_header: true
+  hops: 1
+
+security:
+  enforce_settings_file_permissions: true
+  block_env_access_in_node: true
+  git_node_disable_bare_repos: true
+
+email:
+  enabled: false
+  mode: smtp
+  host: smtp.example.com
+  port: 465
+  user: ""
+  password: ""
+  sender: "self hosted n8n <n8n@examepl.com>"
+  invite_links_email_only: true

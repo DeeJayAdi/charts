@@ -1,0 +1,14 @@
+wikijs:
+  replicas: 1
+  database:
+    type: "sqlite" # sqlite | mysql | postgres | mariadb | mssql
+    host: "" # Default: ""
+    port: "3306" # Default: "3306"
+    user: "wikijs" # Default: wikijs
+    password: "wikijs" # Default: wikijs
+    name: "wikjs" # Default: wikijs
+
+  ingress:
+    host: "wikijs.lab.home.arpa" # Default: "wikijs.lab.home.arpa"
+    tls:
+      secretName: "" # Default: ""

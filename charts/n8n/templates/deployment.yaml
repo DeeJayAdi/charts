@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "n8n.deployName" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "n8n.deployName" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "n8n.deployName" . }}
+    spec:
+      containers:
+        - name: n8n
+          image: n8nio/n8n:{{ .Values.n8n.version }}
+          resources: {}
+          ports:
+            - name: web
+              containerPort: {{ .Values.n8n.port }}
+          readinessProbe:
+            httpGet:
+              port: {{ .Values.n8n.port }}
+              path: /healthz
+            initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
+          livenessProbe:
+            httpGet:
+              port: {{ .Values.n8n.port }}
+              path: /healthz
+            initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "n8n.configmap" . }}
+            - secretRef:
+                name: {{ include "n8n.secret" . }}
