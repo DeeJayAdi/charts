@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  cloudflare-tunnel:
+  wikijs:
   - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2026-01-15T10:23:22.811741835Z"
-    description: Cloudflare Tunnel helm chart
-    digest: 42da73c1038e29ec0d9c5f2d46e093659fe1bde09930bb808f3a847af78a946d
-    name: cloudflare-tunnel
+    appVersion: "2.5"
+    created: "2026-01-15T10:23:24.220385907Z"
+    description: Wiki.js helm chart
+    digest: 2da0ea29735409f77651262aa4d263a7a9e836a6a5a3b372b8b866e64f4dbb9e
+    name: wikijs
     type: application
     urls:
-    - https://charts.iocode.dev/cloudflare-tunnel-1.0.0.tgz
-    version: 1.0.0
-generated: "2026-01-15T10:23:22.811423791Z"
+    - https://charts.iocode.dev/wikijs-0.0.0.tgz
+    version: 0.0.0
+generated: "2026-01-15T10:23:24.220032419Z"
