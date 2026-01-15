@@ -3,12 +3,12 @@ entries:
   wikijs:
   - apiVersion: v2
     appVersion: "2.5"
-    created: "2026-01-15T10:23:24.220385907Z"
+    created: "2026-01-15T10:23:53.306340773Z"
     description: Wiki.js helm chart
-    digest: 2da0ea29735409f77651262aa4d263a7a9e836a6a5a3b372b8b866e64f4dbb9e
+    digest: eb67dacb7a7e83eb892e2fbee97ff2a41eaebeaf9b356200ad423d9d28e6bcf9
     name: wikijs
     type: application
     urls:
     - https://charts.iocode.dev/wikijs-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-15T10:23:24.220032419Z"
+generated: "2026-01-15T10:23:53.305988338Z"
