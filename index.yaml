@@ -1,14 +1,19 @@
 apiVersion: v1
 entries:
-  wikijs:
+  n8n:
   - apiVersion: v2
-    appVersion: "2.5"
-    created: "2026-01-15T10:23:53.306340773Z"
-    description: Wiki.js helm chart
-    digest: eb67dacb7a7e83eb892e2fbee97ff2a41eaebeaf9b356200ad423d9d28e6bcf9
-    name: wikijs
+    appVersion: 2.1.0
+    created: "2026-01-15T10:23:57.729055396Z"
+    description: n8n helm chart
+    digest: 6dae8a86af1893ec04d6cd2a14d2434c138148bdf0242e513aef5d4305c64bd8
+    keywords:
+    - n8n
+    - automation
+    - workflow
+    - integration
+    name: n8n
     type: application
     urls:
-    - https://charts.iocode.dev/wikijs-0.0.0.tgz
+    - https://charts.iocode.dev/n8n-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-15T10:23:53.305988338Z"
+generated: "2026-01-15T10:23:57.728538135Z"
