@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  cloudflare-tunnel:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-01-15T10:23:22.811741835Z"
+    description: Cloudflare Tunnel helm chart
+    digest: 42da73c1038e29ec0d9c5f2d46e093659fe1bde09930bb808f3a847af78a946d
+    name: cloudflare-tunnel
+    type: application
+    urls:
+    - https://charts.iocode.dev/cloudflare-tunnel-1.0.0.tgz
+    version: 1.0.0
+generated: "2026-01-15T10:23:22.811423791Z"
