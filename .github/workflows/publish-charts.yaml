@@ -23,7 +23,7 @@ jobs:
             - name: Lint and package all charts
               run: |
                   set -euo pipefail
-                  charts=("n8n" "wikijs" "cloudflare-tunnel")
+                  charts=($(find charts -maxdepth 1 -mindepth 1 -type d -exec basename {} \;))
                   mkdir -p packaged
                   for c in "${charts[@]}"; do
                       echo "== Linting $c =="
