@@ -1,11 +1,22 @@
 apiVersion: v1
 entries:
+  cloudflare-tunnel:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-01-15T10:30:52.463253979Z"
+    description: Cloudflare Tunnel helm chart
+    digest: 60851a11dfd5e5bf34d44079c4ebb6833f196cd5992713fc9be247a5d2bb0b98
+    name: cloudflare-tunnel
+    type: application
+    urls:
+    - https://charts.iocode.dev/cloudflare-tunnel-1.0.0.tgz
+    version: 1.0.0
   n8n:
   - apiVersion: v2
     appVersion: 2.1.0
-    created: "2026-01-15T10:23:57.729055396Z"
+    created: "2026-01-15T10:30:52.463599352Z"
     description: n8n helm chart
-    digest: 6dae8a86af1893ec04d6cd2a14d2434c138148bdf0242e513aef5d4305c64bd8
+    digest: 47bdb6c2b1f628c55fc5bc23c5d47ec3ae9279a19ef28be44fab41a119ef684a
     keywords:
     - n8n
     - automation
@@ -16,4 +27,15 @@ entries:
     urls:
     - https://charts.iocode.dev/n8n-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-15T10:23:57.728538135Z"
+  wikijs:
+  - apiVersion: v2
+    appVersion: "2.5"
+    created: "2026-01-15T10:30:52.463822798Z"
+    description: Wiki.js helm chart
+    digest: 6bb90f9bb7f2620a68233c68c2d1fe104505531eae238f322509abcaa5944cca
+    name: wikijs
+    type: application
+    urls:
+    - https://charts.iocode.dev/wikijs-0.0.0.tgz
+    version: 0.0.0
+generated: "2026-01-15T10:30:52.46296942Z"
