@@ -2,7 +2,8 @@
 
 # n8n Helm Chart
 
-A Helm chart for deploying [n8n](https://n8n.io) - a fair-code workflow automation platform with 400+ integrations.
+A Helm chart for deploying [n8n](https://n8n.io), a fair-code workflow automation platform with over 400 integrations.
+It is designed for self-hosting, supports email configuration for password resets, includes preconfigured security settings that can be customized, and allows horizontal scaling to multiple replicas when using a LoadBalancer service.
 
 ## Installation
 

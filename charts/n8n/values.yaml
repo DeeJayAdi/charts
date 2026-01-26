@@ -3,13 +3,16 @@ replicaCount: 1
 timezone: "UTC"
 
 n8n:
-  version: "2.1.0"
+  version: "2.4.6"
   port: 80
   protocol: http
   domain: n8n.example.com
   encryption_key: "n8n-s3lf-h0st3d"
 
   runners_enabled: true
+
+service:
+  type: ClusterIP
 
 probes:
   readiness:

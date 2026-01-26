@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: {{ include "n8n.deployName" . }}
-  type: ClusterIP
+  type: {{ .Values.service.type }}
   ports:
     - name: web
       port: {{ .Values.n8n.port }}

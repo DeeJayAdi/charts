@@ -1,9 +1,9 @@
 apiVersion: v2
 name: n8n
-description: n8n helm chart
+description: A Helm chart for deploying n8n, a fair-code workflow automation platform with over 400 integrations. It is designed for self-hosting, supports email configuration for password resets, includes preconfigured security settings that can be customized, and allows horizontal scaling to multiple replicas when using a LoadBalancer service.
 type: application
 version: 0.0.0
-appVersion: "2.1.0"
+appVersion: "universal"
 
 keywords:
   - n8n

@@ -3,7 +3,7 @@
 {{- end -}}
 
 {{- define "n8n.svcName" -}}
-{{ printf "n8n-svc-%s-hl" $.Release.Name }}
+{{ printf "%s" $.Release.Name }}
 {{- end -}}
 
 {{- define "n8n.ingName" -}}
