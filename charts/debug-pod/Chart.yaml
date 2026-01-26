@@ -1,0 +1,16 @@
+apiVersion: v2
+name: debug-pod
+description: |
+  This helm chart is deploying an pod with an custom ubuntu image with usefull tools for debugging.
+
+  Tool list:
+
+  - ping
+  - curl
+  - dig
+  - traceroute
+  - netcat
+  - nslookup
+type: application
+version: 0.0.0
+appVersion: "latest"
