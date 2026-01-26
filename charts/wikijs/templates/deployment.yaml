@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "wikijs.deployName" . }}
 spec:
-  replicas: {{ .Values.wikijs.replicas | default 3  }}
+  replicas: {{ .Values.replicas | default 3  }}
   selector:
     matchLabels:
       app: {{ include "wikijs.deployName" . }}
@@ -14,21 +14,21 @@ spec:
     spec:
       containers:
         - name: wikijs
-          image: requarks/wiki:{{ .Chart.AppVersion }}
+          image: requarks/wiki:{{ .Values.version }}
           resources: {}
           env:
             - name: DB_TYPE
-              value: {{ .Values.wikijs.database.type | default "mariadb" }}
+              value: {{ .Values.database.type | default "mariadb" }}
             - name: DB_HOST
-              value: {{ .Values.wikijs.database.host }}
+              value: {{ .Values.database.host }}
             - name: DB_PORT
-              value: {{ .Values.wikijs.database.port | default "3306" | quote }}
+              value: {{ .Values.database.port | default "3306" | quote }}
             - name: DB_USER
-              value: {{ .Values.wikijs.database.user | default "wikijs" }}
+              value: {{ .Values.database.user | default "wikijs" }}
             - name: DB_PASS
-              value: {{ .Values.wikijs.database.password | default "wikijs" | quote }}
+              value: {{ .Values.database.password | default "wikijs" | quote }}
             - name: DB_NAME
-              value: {{ .Values.wikijs.database.name | default "wikijs" }}
+              value: {{ .Values.database.name | default "wikijs" }}
           ports:
             - name: web
               containerPort: 3000

@@ -5,14 +5,14 @@ metadata:
   labels:
     app.kubernetes.io/name: {{ include "wikijs.ingName" . }}
 spec:
-  {{- if .Values.wikijs.ingress.tls.secretName }}
+  {{- if .Values.ingress.tls.secretName }}
   tls:
-    - secretName: {{ .Values.wikijs.ingress.tls.secretName }}
+    - secretName: {{ .Values.ingress.tls.secretName }}
       hosts:
-        - {{ .Values.wikijs.ingress.host }}
+        - {{ .Values.ingress.host }}
   {{- end }}
   rules:
-  - host: {{ .Values.wikijs.ingress.host }}
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
       - pathType: Prefix
