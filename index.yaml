@@ -3,9 +3,9 @@ entries:
   cloudflare-tunnel:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-01-15T10:30:52.463253979Z"
+    created: "2026-01-26T06:44:19.190098578Z"
     description: Cloudflare Tunnel helm chart
-    digest: 60851a11dfd5e5bf34d44079c4ebb6833f196cd5992713fc9be247a5d2bb0b98
+    digest: 4bc7f307ac5b7fe7599e6eb037208025786d39ba0a7a6b97f810729bf2cb90c4
     name: cloudflare-tunnel
     type: application
     urls:
@@ -13,10 +13,14 @@ entries:
     version: 1.0.0
   n8n:
   - apiVersion: v2
-    appVersion: 2.1.0
-    created: "2026-01-15T10:30:52.463599352Z"
-    description: n8n helm chart
-    digest: 47bdb6c2b1f628c55fc5bc23c5d47ec3ae9279a19ef28be44fab41a119ef684a
+    appVersion: universal
+    created: "2026-01-26T06:44:19.190460982Z"
+    description: A Helm chart for deploying n8n, a fair-code workflow automation platform
+      with over 400 integrations. It is designed for self-hosting, supports email
+      configuration for password resets, includes preconfigured security settings
+      that can be customized, and allows horizontal scaling to multiple replicas when
+      using a LoadBalancer service.
+    digest: 41a6a01dc1a765caf1afd23af76d17c810b67b72e3b7041e334d2ec06dc13688
     keywords:
     - n8n
     - automation
@@ -30,12 +34,12 @@ entries:
   wikijs:
   - apiVersion: v2
     appVersion: "2.5"
-    created: "2026-01-15T10:30:52.463822798Z"
+    created: "2026-01-26T06:44:19.190654208Z"
     description: Wiki.js helm chart
-    digest: 6bb90f9bb7f2620a68233c68c2d1fe104505531eae238f322509abcaa5944cca
+    digest: b8181843937890b78498b4d4fe1d38c0a2729e4a2fc9cacc9502f5f87b0311b4
     name: wikijs
     type: application
     urls:
     - https://charts.iocode.dev/wikijs-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-15T10:30:52.46296942Z"
+generated: "2026-01-26T06:44:19.189752446Z"
