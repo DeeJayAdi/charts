@@ -3,9 +3,9 @@ entries:
   cloudflare-tunnel:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-01-26T07:20:28.144062121Z"
+    created: "2026-01-26T08:05:11.630221695Z"
     description: Cloudflare Tunnel helm chart
-    digest: fb96a397995bb597d3d66b5c0b4520de1a1909e39b9f5a2abe914bc41c6e94c7
+    digest: bc7ea313ffba3bf30e7f26183a3fca53234070521c2c399bba613e83c33aeb46
     name: cloudflare-tunnel
     type: application
     urls:
@@ -14,11 +14,11 @@ entries:
   debug-pod:
   - apiVersion: v2
     appVersion: latest
-    created: "2026-01-26T07:20:28.144182091Z"
+    created: "2026-01-26T08:05:11.630391473Z"
     description: 'This helm chart is deploying an pod with an custom ubuntu image
       with usefull tools for debugging.  Tool list:  - ping - curl - dig - traceroute
       - netcat - nslookup '
-    digest: c13e8ff1aa57f0bb57dc8c978abcdc47961d427e734ec4ee2d57db6ab3ca2ef8
+    digest: 3b64a414cd00db3d0cd80618463a69cb37e09ffb2f7162a4cc12c080af647971
     name: debug-pod
     type: application
     urls:
@@ -27,13 +27,13 @@ entries:
   n8n:
   - apiVersion: v2
     appVersion: universal
-    created: "2026-01-26T07:20:28.144518869Z"
+    created: "2026-01-26T08:05:11.630775934Z"
     description: A Helm chart for deploying n8n, a fair-code workflow automation platform
       with over 400 integrations. It is designed for self-hosting, supports email
       configuration for password resets, includes preconfigured security settings
       that can be customized, and allows horizontal scaling to multiple replicas when
       using a LoadBalancer service.
-    digest: db23ed8359ca9bb41e5d187d067b6a00494df83b37e105c9e0ad83653681cdb4
+    digest: 85d488dd1b91d662248083e1232914c19664f1326d10b63e79dd08a71635ae50
     keywords:
     - n8n
     - automation
@@ -47,12 +47,12 @@ entries:
   wikijs:
   - apiVersion: v2
     appVersion: "2.5"
-    created: "2026-01-26T07:20:28.144724785Z"
+    created: "2026-01-26T08:05:11.630995376Z"
     description: Wiki.js helm chart
-    digest: 1bab2ba69153a4e43c04a5d9f683df16d4b702357c06fa8551cb15cd345a5687
+    digest: 1c9b419ecd412b9d24f7aa54188d0fb09e266380a50c5800ab4b9cf3578f412f
     name: wikijs
     type: application
     urls:
     - https://charts.iocode.dev/wikijs-0.0.0.tgz
     version: 0.0.0
-generated: "2026-01-26T07:20:28.143759987Z"
+generated: "2026-01-26T08:05:11.629900072Z"
