@@ -20,7 +20,7 @@ spec:
               value: "65532 65532"
       containers:
       - name: cloudflared
-        image: cloudflare/cloudflared:latest
+        image: cloudflare/cloudflared:{{ .Values.cloudflared.version }}
         imagePullPolicy: IfNotPresent
         env:
             - name: TUNNEL_TOKEN
