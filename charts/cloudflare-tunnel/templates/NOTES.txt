@@ -1,0 +1,8 @@
+Thank you for using this Helm chart!  
+
+If you find it helpful, please consider supporting me. Your support helps me keep improving and maintaining this chart.  
+
+https://buycoffee.to/iocode-dev
+https://github.com/sponsors/DeeJayAdi
+
+Happy deploying! 🚀
